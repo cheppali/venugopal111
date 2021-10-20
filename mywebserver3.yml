@@ -1,5 +1,5 @@
 ---
-- hosts: myubuntuserver
+- hosts: myredhatserver
   become: yes
   tasks: 
   - name: install websever on ubuntu ansible nodes
