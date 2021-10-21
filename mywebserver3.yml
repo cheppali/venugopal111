@@ -4,12 +4,12 @@
   tasks: 
   - name: install websever on ubuntu ansible nodes
     apt:
-      name: apache2
+      name: "{{webserverubuntu}}"
       state: present
     when: ansible_os_family=="Debian"
 
   - name: install websever on RedHat ansible nodes
     yum:
-      name: httpd
+      name: "{{webserverredhat}}"
       state: present 
     when: ansible_os_family=="RedHat"
