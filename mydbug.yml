@@ -5,9 +5,9 @@
   - name: i want to execute linux command
     command:
       cmd: hostname -f
-      resgister: myresult
+    resgister: myresult
 
 
   - name: i want to displayd myresult
     debug:
-      msg:"{{myresult}}"
+      msg: "{{myresult}}"
