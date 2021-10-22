@@ -1,13 +1,12 @@
 ---
-- hosts: 172.31.41.56
+- hosts: 172.31.17.196
   become: yes
-  tasks: 
+  tasks:
   - name: i want to execute linux command
     command:
       cmd: hostname -f
-    resgister: myresult
-
-
-  - name: i want to displayd myresult
+    register: myresult
+    
+  - name:  i want to display  myresult
     debug:
       msg: "{{myresult}}"
