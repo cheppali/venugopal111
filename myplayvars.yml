@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.41.56
+  become: yes
+  vars:
+    myvar1: git
+    myvar2: tree
+  tasks:
+  - name: i want to displayed myvar1
+    debug:
+      msg: "{{myvar1}}"
