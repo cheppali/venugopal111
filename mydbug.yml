@@ -10,3 +10,16 @@
   - name:  i want to display  myresult
     debug:
       msg: "{{myresult}}"
+
+  - name:  install git
+    get:
+      name: git
+      state: present
+    when: myresult.stderr ==""
+    
+    
+  - name: install tree
+    git:
+      name: tree
+      state: present
+    when: myresult.stderr !=""  
